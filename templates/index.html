@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "App Name" %}{% endblock title %}
+{% block header %}
+
+{% endblock header %}
+{% block content %}
+<div class="jumbotron">
+	<div class="row justify-content-center">
+		<div class="div-width-100-text-center">
+			<h1>ТОО FlexoPlus</h1>
+		</div>
+		<div>
+			<h2 style="text-align: center">ПОЛИГРАФИЧЕСКОЕ ОБОРУДОВАНИЕ И РАСХОДНЫЕ МАТЕРИАЛЫ</h2>
+			<p style="text-align: center">для всех стадий печатного и производственного процесса</p>
+		</div>
+	</div>	
+</div>
+
+<div>
+	{% if user.is_authenticated %}	
+		{% if sale_year_mohtn_total != None %}
+			<hr>
+			<h1>Статистика по продажам</h1>
+			<div class="row">
+				<table class="table-manager" style="width:100%">
+					<thead>
+						<tr>
+							<th><p>{% trans "year" %}</p></th>
+							<th><p>{% trans "month" %}</p></th>
+							<th><p>{% trans "total" %}</p></th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for c in sale_year_mohtn_total %}
+						<tr>
+							<td><p>{{ c.yr | stringformat:"1.0f"}}</p></td>
+							<td><p>{{ c.mon | stringformat:"1.0f"}}</p></td>
+							<td><p>{{ c.tot | stringformat:"1.0f" }} ₽</p></td>
+						</tr>
+						{% endfor %}
+
+					</tbody>
+				</table>
+			</div>
+		{% endif %}
+		{% if application_year_mohtn_price != None %}
+			<hr>
+			<h1>Статистика по заявкам</h1>
+			<div class="row">
+				<table class="table-manager" style="width:100%">
+					<thead>
+						<tr>
+							<th><p>{% trans "year" %}</p></th>
+							<th><p>{% trans "month" %}</p></th>
+							<th><p>{% trans "total" %}</p></th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for c in application_year_mohtn_price %}
+						<tr>
+							<td><p>{{ c.yr | stringformat:"1.0f"}}</p></td>
+							<td><p>{{ c.mon | stringformat:"1.0f"}}</p></td>
+							<td><p>{{ c.tot | stringformat:"1.0f" }} ₽</p></td>
+						</tr>
+						{% endfor %}
+
+					</tbody>
+				</table>
+			</div>
+		{% endif %}
+	{% else %}
+		<div>
+			<div class="card">
+				<div class="card-header">
+					<h3>ДОПЕЧАТНОЕ ОБОРУДОВАНИЕ</h3>
+				</div>
+				<div class="card-body">					
+					<div class="row">
+						<div class="col-md-4">
+							<p>для подготовки тиража к печати</p>
+						</div>								
+						<div class="col-md-8">
+							<img src="{% static 'images/index1.jpg' %}" class="img-center">
+						</div>
+					</div>
+				</div>
+				<div class="card-footer text-muted">
+					<a class="nav-link" href="{% url 'catalog_list' %}">{% trans "Catalog list" %}</a>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					<h3>ПЕЧАТНОЕ ОБОРУДОВАНИЕ</h3>
+				</div>
+				<div class="card-body">					
+					<div class="row">
+						<div class="col-md-4">
+							<p>для оснащения полиграфического производство любого масштаба и уровня сложности</p>
+						</div>								
+						<div class="col-md-8">
+							<img src="{% static 'images/index2.jpg' %}" class="img-center">
+						</div>
+					</div>
+				</div>
+				<div class="card-footer text-muted">
+					<a class="nav-link" href="{% url 'catalog_list' %}">{% trans "Catalog list" %}</a>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					<h3>ПОСЛЕПЕЧАТНОЕ ОБОРУДОВАНИЕ</h3>
+				</div>
+				<div class="card-body">					
+					<div class="row">
+						<div class="col-md-4">
+							<p>для обработки отпечатанной продукции</p>
+						</div>								
+						<div class="col-md-8">
+							<img src="{% static 'images/index3.jpg' %}" class="img-center">
+						</div>
+					</div>
+				</div>
+				<div class="card-footer text-muted">
+					<a class="nav-link" href="{% url 'catalog_list' %}">{% trans "Catalog list" %}</a>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					<h3>БУМАГА</h3>
+				</div>
+				<div class="card-body">					
+					<div class="row">
+						<div class="col-md-4">
+							<p>для оснащения полиграфического производства любого масштаба и уровня сложности</p>
+						</div>								
+						<div class="col-md-8">
+							<img src="{% static 'images/index4.jpg' %}" class="img-center">
+						</div>
+					</div>
+				</div>
+				<div class="card-footer text-muted">
+					<a class="nav-link" href="{% url 'catalog_list' %}">{% trans "Catalog list" %}</a>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					<h3>РАСХОДНЫЕ МАТЕРИАЛЫ</h3>
+				</div>
+				<div class="card-body">					
+					<div class="row">
+						<div class="col-md-4">
+							<p>для изготовления полиграфической продукции и обслуживания оборудования</p>
+						</div>								
+						<div class="col-md-8">
+							<img src="{% static 'images/index5.jpg' %}" class="img-center">
+						</div>
+					</div>
+				</div>
+				<div class="card-footer text-muted">
+					<a class="nav-link" href="{% url 'catalog_list' %}">{% trans "Catalog list" %}</a>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+</div>
+{% endblock content %}
+

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "Read" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "notification" %}</h2>
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">
+			<h4>{{ notification.title }}</h4>			
+		</div>
+		<div class="card-body">
+			<div class="row">
+				<p>{{ notification.details | linebreaks }}</p>
+			</div>				
+		</div>
+		<div class="card-footer">				
+			<p>{{ notification.start | date:"d.m.Y H:i"}}-{{ notification.finish | date:"d.m.Y H:i"}}</p>			
+		</div>		
+	</div>
+	<a class="btn btn-outline-info" style="width:100px; margin-top:5px" onclick="history.back()">{% trans "Back" %}</a>    	
+</div>
+
+{% endblock content %}

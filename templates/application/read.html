@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "View" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "application" %}</h2>
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">
+			<h5>{{ application.datea | date:"d.m.Y"}}</h5>
+			<h4>{{ application.client }}</h4		
+		</div>
+		<div class="card-body">
+			<p><strong>{% trans "application_kind" %}</strong>: {{ application.kind }}</p>
+			<p><strong>{% trans "application_title" %}</strong>: {{ application.title }}</p>
+			<p><strong>{% trans "application_details" %}</strong>: {{ application.details }}</p>
+			<p><strong>{% trans "application_price" %}</strong>: {{ application.price | stringformat:"1.0f" }} ₽</p>
+		</div>
+		<div class="card-footer">				
+		</div>		
+	</div>
+	<br>
+	<div class="div-button-center">
+		<a class="btn btn-outline-info" style="width:100px" href="{% url 'application_index' %}">{% trans "Back" %}</a> 	
+	</div>	
+</div>
+{% endblock content %}

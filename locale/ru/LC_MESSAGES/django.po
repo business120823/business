@@ -1,0 +1,660 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-07 20:18+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+#: .\small\forms.py:27 .\small\models.py:32 .\templates\kind\index.html:12
+msgid "kind_title"
+msgstr "Название"
+
+#: .\small\forms.py:34
+msgid "Value must start with a capital letter"
+msgstr "Значение должно начинаться с заглавной буквы"
+
+#: .\small\forms.py:51
+msgid "client_title"
+msgstr "Название клиента"
+
+#: .\small\forms.py:69 .\templates\client\create.html:5
+#: .\templates\client\edit.html:5 .\templates\client\index.html:6
+#: .\templates\client\read.html:5
+msgid "client"
+msgstr "Клиент"
+
+#: .\small\forms.py:70 .\templates\kind\create.html:5
+#: .\templates\kind\edit.html:5 .\templates\kind\index.html:6
+#: .\templates\kind\read.html:5
+msgid "kind"
+msgstr "Категория заявки"
+
+#: .\small\forms.py:90 .\small\forms.py:174
+msgid "Cannot be greater than the current date"
+msgstr "Не может быть больше текущей даты"
+
+#: .\small\forms.py:99 .\small\forms.py:183
+msgid "The number must be greater than zero"
+msgstr "Число должно быть больше нуля"
+
+#: .\small\forms.py:112 .\small\models.py:129 .\small\models.py:165
+#: .\small\models.py:262 .\templates\category\index.html:12
+msgid "category_title"
+msgstr "Категория"
+
+#: .\small\forms.py:136 .\templates\catalog\list.html:20
+#: .\templates\catalog\list.html:52 .\templates\catalog\list.html:54
+#: .\templates\category\create.html:5 .\templates\category\edit.html:5
+#: .\templates\category\index.html:6 .\templates\category\read.html:5
+msgid "category"
+msgstr "Категория товара"
+
+#: .\small\forms.py:144 .\small\forms.py:208
+msgid "Quantity must be greater than zero"
+msgstr "Количество должно быть больше нуля."
+
+#: .\small\forms.py:153
+msgid "Price must be greater than zero"
+msgstr "Цена должна быть больше нуля"
+
+#: .\small\forms.py:196 .\templates\base.html:46
+#: .\templates\catalog\create.html:6 .\templates\catalog\edit.html:6
+#: .\templates\catalog\index.html:4 .\templates\catalog\index.html:14
+msgid "catalog"
+msgstr "Товар"
+
+#: .\small\forms.py:229 .\small\forms.py:238 .\small\forms.py:258
+msgid "Wrong date and time format"
+msgstr "Неправильный формат даты и времени"
+
+#: .\small\models.py:43 .\templates\client\index.html:12
+msgid "client_name"
+msgstr "Название клиента"
+
+#: .\small\models.py:44 .\templates\client\index.html:13
+#: .\templates\client\read.html:12
+msgid "client_address"
+msgstr "Адрес"
+
+#: .\small\models.py:45 .\templates\client\index.html:14
+#: .\templates\client\read.html:13
+msgid "client_phone"
+msgstr "Телефон"
+
+#: .\small\models.py:46 .\templates\client\index.html:15
+#: .\templates\client\read.html:14
+msgid "client_email"
+msgstr "E-Mail"
+
+#: .\small\models.py:47 .\templates\client\index.html:16
+#: .\templates\client\read.html:15
+msgid "client_leader"
+msgstr "ФИО руководителя"
+
+#: .\small\models.py:65 .\templates\application\index.html:12
+msgid "datea"
+msgstr "Дата заявки"
+
+#: .\small\models.py:68 .\templates\application\index.html:15
+#: .\templates\application\read.html:14
+msgid "application_title"
+msgstr "Тема заявки"
+
+#: .\small\models.py:69 .\templates\application\index.html:16
+#: .\templates\application\read.html:15
+msgid "application_details"
+msgstr "Детали заявки"
+
+#: .\small\models.py:70 .\templates\application\index.html:17
+#: .\templates\application\read.html:16
+msgid "application_price"
+msgstr "Стоимость"
+
+#: .\small\models.py:88 .\small\models.py:107
+#: .\templates\catalog\index.html:10 .\templates\coming\index.html:12
+#: .\templates\coming\read.html:10
+msgid "datec"
+msgstr "Дата"
+
+#: .\small\models.py:89 .\small\models.py:108 .\small\models.py:193
+#: .\small\models.py:213 .\small\models.py:259
+#: .\templates\catalog\index.html:11 .\templates\coming\index.html:13
+#: .\templates\coming\read.html:11 .\templates\outgo\index.html:13
+#: .\templates\outgo\read.html:11 .\templates\sale\index.html:11
+msgid "numb"
+msgstr "№ Накладной"
+
+#: .\small\models.py:90 .\small\models.py:109 .\templates\catalog\index.html:9
+#: .\templates\coming\index.html:14 .\templates\coming\read.html:14
+msgid "organization"
+msgstr "Организация-поставщик"
+
+#: .\small\models.py:110 .\small\models.py:171 .\small\models.py:215
+#: .\small\models.py:268 .\templates\catalog\index.html:12
+#: .\templates\catalog\index.html:26 .\templates\coming\index.html:33
+#: .\templates\coming\read.html:17 .\templates\index.html:31
+#: .\templates\index.html:56 .\templates\outgo\index.html:33
+#: .\templates\outgo\read.html:17 .\templates\sale\index.html:12
+#: .\templates\sale\index.html:26
+msgid "total"
+msgstr "Сумма"
+
+#: .\small\models.py:142 .\small\models.py:166 .\small\models.py:263
+#: .\templates\catalog\index.html:22 .\templates\sale\index.html:22
+msgid "catalog_title"
+msgstr "Название товара"
+
+#: .\small\models.py:143 .\small\models.py:167 .\small\models.py:264
+#: .\templates\catalog\details.html:14 .\templates\catalog\read.html:14
+#: .\templates\sale\read.html:14
+msgid "catalog_details"
+msgstr "Описание товара"
+
+#: .\small\models.py:144 .\templates\catalog\details.html:15
+#: .\templates\catalog\index.html:23 .\templates\catalog\read.html:15
+#: .\templates\sale\index.html:23 .\templates\sale\read.html:15
+msgid "catalog_price"
+msgstr "Цена"
+
+#: .\small\models.py:145 .\small\models.py:169 .\small\models.py:237
+#: .\small\models.py:266 .\templates\catalog\details.html:16
+#: .\templates\catalog\index.html:24 .\templates\catalog\read.html:16
+#: .\templates\sale\index.html:24 .\templates\sale\read.html:16
+msgid "quantity"
+msgstr "Количество"
+
+#: .\small\models.py:146 .\small\models.py:170 .\small\models.py:267
+#: .\templates\catalog\index.html:25 .\templates\sale\index.html:25
+msgid "unit"
+msgstr "Ед.измерения"
+
+#: .\small\models.py:163
+msgid "coming_id"
+msgstr "coming_id"
+
+#: .\small\models.py:164
+msgid "category_id"
+msgstr "category_id"
+
+#: .\small\models.py:168 .\small\models.py:265
+#: .\templates\catalog\list.html:62 .\templates\catalog\list.html:64
+msgid "price"
+msgstr "Цена"
+
+#: .\small\models.py:172
+msgid "sale_quantity"
+msgstr "Продано товара"
+
+#: .\small\models.py:173 .\templates\catalog\list.html:117
+msgid "available"
+msgstr "Доступно товара"
+
+#: .\small\models.py:192 .\small\models.py:212 .\small\models.py:258
+#: .\templates\outgo\index.html:12 .\templates\outgo\read.html:10
+#: .\templates\sale\index.html:10
+msgid "dateo"
+msgstr "Дата"
+
+#: .\small\models.py:194 .\small\models.py:214 .\small\models.py:260
+#: .\templates\outgo\index.html:14 .\templates\outgo\read.html:14
+#: .\templates\sale\index.html:9
+msgid "consumer"
+msgstr "Организация-потребитель"
+
+#: .\small\models.py:257
+msgid "outgo_id"
+msgstr "outgo_id"
+
+#: .\small\models.py:261
+msgid "catalog_id"
+msgstr "catalog_id"
+
+#: .\small\models.py:290 .\small\models.py:309
+#: .\templates\message\index.html:12
+msgid "datem"
+msgstr "Дата/время"
+
+#: .\small\models.py:293 .\small\models.py:318
+msgid "message_details"
+msgstr "Текст собщения"
+
+#: .\small\models.py:308
+msgid "message_id"
+msgstr "message_id"
+
+#: .\small\models.py:310
+msgid "sender_id"
+msgstr "sender_id"
+
+#: .\small\models.py:311
+msgid "sender_username"
+msgstr "Логин отправителя"
+
+#: .\small\models.py:312
+msgid "sender_first_name"
+msgstr "Имя отправителя"
+
+#: .\small\models.py:313
+msgid "sender_last_name"
+msgstr "Фамилия отправителя"
+
+#: .\small\models.py:314
+msgid "recipient_id"
+msgstr "recipient_id"
+
+#: .\small\models.py:315
+msgid "recipient_username"
+msgstr "Логин получателя"
+
+#: .\small\models.py:316
+msgid "recipient_first_name"
+msgstr "Имя получателя"
+
+#: .\small\models.py:317
+msgid "recipient_last_name"
+msgstr "Фамилия получателя"
+
+#: .\small\models.py:334
+msgid "auth_user_id"
+msgstr "auth_user_id"
+
+#: .\small\models.py:335
+msgid "is_superuser"
+msgstr "is_superuser"
+
+#: .\small\models.py:336
+msgid "username"
+msgstr "Логин пользователя"
+
+#: .\small\models.py:337
+msgid "first_name"
+msgstr "Имя"
+
+#: .\small\models.py:338
+msgid "last_name"
+msgstr "Фамилия"
+
+#: .\small\models.py:339
+msgid "last_send_id"
+msgstr "last_send_id"
+
+#: .\small\models.py:340 .\templates\message\list.html:28
+msgid "last_send_message"
+msgstr "Последнее сообщение"
+
+#: .\small\models.py:341
+msgid "last_recipient_id"
+msgstr "last_recipient_id"
+
+#: .\small\models.py:342 .\templates\message\list.html:34
+msgid "last_recipient_message"
+msgstr "Последнее сообщение"
+
+#: .\small\models.py:358 .\templates\notification\index.html:12
+msgid "start"
+msgstr "Начало"
+
+#: .\small\models.py:359 .\templates\notification\index.html:12
+msgid "finish"
+msgstr "Завершение"
+
+#: .\small\models.py:360
+msgid "notification_title"
+msgstr "Тема уведомления"
+
+#: .\small\models.py:361
+msgid "notification_details"
+msgstr "Детали уведомления"
+
+#: .\small\models.py:376 .\small\models.py:395
+msgid "yr"
+msgstr "Год"
+
+#: .\small\models.py:377 .\small\models.py:396
+msgid "mon"
+msgstr "Месяц"
+
+#: .\small\models.py:378 .\small\models.py:397
+msgid "tot"
+msgstr "Всего"
+
+#: .\small\models.py:415 .\templates\news\index.html:12
+msgid "daten"
+msgstr "Дата"
+
+#: .\small\models.py:416
+msgid "news_title"
+msgstr "Заголовок"
+
+#: .\small\models.py:417
+msgid "news_details"
+msgstr "Текст новости"
+
+#: .\small\models.py:418
+msgid "news_photo"
+msgstr "Фотография"
+
+#: .\templates\application\create.html:3 .\templates\application\index.html:18
+#: .\templates\application\index.html:43 .\templates\catalog\index.html:27
+#: .\templates\catalog\index.html:62 .\templates\category\create.html:3
+#: .\templates\category\index.html:13 .\templates\category\index.html:33
+#: .\templates\client\create.html:3 .\templates\client\index.html:17
+#: .\templates\client\index.html:41 .\templates\coming\index.html:17
+#: .\templates\coming\index.html:47 .\templates\kind\create.html:3
+#: .\templates\kind\index.html:13 .\templates\kind\index.html:33
+#: .\templates\message\index.html:41 .\templates\news\index.html:15
+#: .\templates\news\index.html:47 .\templates\notification\index.html:15
+#: .\templates\notification\index.html:47 .\templates\outgo\index.html:17
+#: .\templates\outgo\index.html:47 .\templates\sale\index.html:27
+#: .\templates\sale\index.html:62
+msgid "Add"
+msgstr "Добавить"
+
+#: .\templates\application\create.html:5 .\templates\application\edit.html:5
+#: .\templates\application\index.html:6 .\templates\application\read.html:5
+msgid "application"
+msgstr "Заявка"
+
+#: .\templates\application\create.html:12 .\templates\application\edit.html:12
+#: .\templates\catalog\create.html:13 .\templates\catalog\edit.html:13
+#: .\templates\category\create.html:12 .\templates\category\edit.html:12
+#: .\templates\client\create.html:12 .\templates\client\edit.html:12
+#: .\templates\coming\create.html:13 .\templates\coming\edit.html:13
+#: .\templates\kind\create.html:12 .\templates\kind\edit.html:12
+#: .\templates\news\create.html:13 .\templates\news\edit.html:13
+#: .\templates\notification\create.html:13
+#: .\templates\notification\edit.html:13 .\templates\outgo\create.html:13
+#: .\templates\outgo\edit.html:13 .\templates\sale\create.html:13
+#: .\templates\sale\edit.html:13
+msgid "Save"
+msgstr "Сохранить"
+
+#: .\templates\application\create.html:13 .\templates\application\edit.html:13
+#: .\templates\application\read.html:23 .\templates\catalog\create.html:14
+#: .\templates\catalog\details.html:20 .\templates\catalog\edit.html:14
+#: .\templates\catalog\index.html:65 .\templates\catalog\read.html:22
+#: .\templates\category\create.html:13 .\templates\category\edit.html:13
+#: .\templates\category\read.html:18 .\templates\client\create.html:13
+#: .\templates\client\edit.html:13 .\templates\client\read.html:22
+#: .\templates\coming\create.html:14 .\templates\coming\edit.html:14
+#: .\templates\coming\read.html:21 .\templates\kind\create.html:13
+#: .\templates\kind\edit.html:13 .\templates\kind\read.html:18
+#: .\templates\message\send.html:45 .\templates\news\create.html:14
+#: .\templates\news\edit.html:14 .\templates\news\read.html:29
+#: .\templates\notification\create.html:14
+#: .\templates\notification\edit.html:14 .\templates\notification\read.html:22
+#: .\templates\outgo\create.html:14 .\templates\outgo\edit.html:14
+#: .\templates\outgo\read.html:21 .\templates\sale\create.html:14
+#: .\templates\sale\edit.html:14 .\templates\sale\index.html:65
+#: .\templates\sale\read.html:22
+msgid "Back"
+msgstr "Назад"
+
+#: .\templates\application\edit.html:3 .\templates\application\index.html:32
+#: .\templates\catalog\edit.html:3 .\templates\catalog\index.html:52
+#: .\templates\category\edit.html:3 .\templates\category\index.html:22
+#: .\templates\client\edit.html:3 .\templates\client\index.html:30
+#: .\templates\coming\edit.html:3 .\templates\coming\index.html:37
+#: .\templates\kind\edit.html:3 .\templates\kind\index.html:22
+#: .\templates\news\edit.html:3 .\templates\news\index.html:36
+#: .\templates\notification\edit.html:3 .\templates\notification\index.html:36
+#: .\templates\outgo\edit.html:3 .\templates\outgo\index.html:37
+#: .\templates\sale\edit.html:3 .\templates\sale\index.html:52
+msgid "Change"
+msgstr "Изменить"
+
+#: .\templates\application\index.html:3 .\templates\category\index.html:3
+#: .\templates\client\index.html:3 .\templates\kind\index.html:3
+msgid "List"
+msgstr "Список"
+
+#: .\templates\application\index.html:13
+msgid "application_client"
+msgstr "Клиент"
+
+#: .\templates\application\index.html:14 .\templates\application\read.html:13
+msgid "application_kind"
+msgstr "Категория"
+
+#: .\templates\application\index.html:33 .\templates\application\read.html:3
+#: .\templates\catalog\index.html:53 .\templates\category\index.html:23
+#: .\templates\category\read.html:3 .\templates\client\index.html:31
+#: .\templates\client\read.html:3 .\templates\coming\index.html:38
+#: .\templates\kind\index.html:23 .\templates\kind\read.html:3
+#: .\templates\news\index.html:37 .\templates\notification\index.html:37
+#: .\templates\outgo\index.html:38 .\templates\sale\index.html:53
+msgid "View"
+msgstr "Просмотреть"
+
+#: .\templates\application\index.html:34 .\templates\catalog\index.html:54
+#: .\templates\category\index.html:24 .\templates\client\index.html:32
+#: .\templates\coming\index.html:39 .\templates\kind\index.html:24
+#: .\templates\news\index.html:38 .\templates\notification\index.html:38
+#: .\templates\outgo\index.html:39 .\templates\sale\index.html:54
+msgid "Delete"
+msgstr "Удалить"
+
+#: .\templates\base.html:44
+msgid "Home"
+msgstr "Главная"
+
+#: .\templates\base.html:49 .\templates\news\create.html:6
+#: .\templates\news\edit.html:6 .\templates\news\read.html:7
+msgid "news"
+msgstr "Новости"
+
+#: .\templates\base.html:52 .\templates\contact.html:8
+msgid "Contacts"
+msgstr "Контакты"
+
+#: .\templates\base.html:56 .\templates\base.html:78
+#: .\templates\notification\index.html:3 .\templates\notification\index.html:6
+#: .\templates\notification\list.html:4 .\templates\notification\list.html:8
+msgid "notifications"
+msgstr "Уведомления"
+
+#: .\templates\base.html:59 .\templates\base.html:79
+#: .\templates\message\index.html:3 .\templates\message\index.html:6
+#: .\templates\message\list.html:3 .\templates\message\list.html:6
+msgid "messages"
+msgstr "Сообщения"
+
+#: .\templates\base.html:70
+msgid "kinds"
+msgstr "Категории заявки"
+
+#: .\templates\base.html:71
+msgid "clients"
+msgstr "Клиенты"
+
+#: .\templates\base.html:72
+msgid "applications"
+msgstr "Заявки"
+
+#: .\templates\base.html:74
+msgid "categorys"
+msgstr "Категории товара"
+
+#: .\templates\base.html:75 .\templates\coming\index.html:3
+#: .\templates\coming\index.html:6
+msgid "comings"
+msgstr "Приходные накладные"
+
+#: .\templates\base.html:76 .\templates\outgo\index.html:3
+#: .\templates\outgo\index.html:6
+msgid "outgos"
+msgstr "Расходные накладные"
+
+#: .\templates\base.html:83
+msgid "My account"
+msgstr "Мой аккаунт"
+
+#: .\templates\base.html:84
+msgid "Change password"
+msgstr "Изменить пароль"
+
+#: .\templates\base.html:86
+msgid "Log out"
+msgstr "Выход"
+
+#: .\templates\base.html:91
+msgid "Log In"
+msgstr "Вход"
+
+#: .\templates\base.html:92
+msgid "Sign up"
+msgstr "Регистрация"
+
+#: .\templates\catalog\create.html:3 .\templates\coming\create.html:3
+#: .\templates\news\create.html:3 .\templates\notification\create.html:3
+#: .\templates\outgo\create.html:3 .\templates\sale\create.html:3
+msgid "Create"
+msgstr "Создать"
+
+#: .\templates\catalog\details.html:4 .\templates\catalog\list.html:107
+msgid "Catalog details"
+msgstr "Описание товара"
+
+#: .\templates\catalog\index.html:8
+msgid "Coming"
+msgstr "Приходная накладная"
+
+#: .\templates\catalog\index.html:21 .\templates\sale\index.html:21
+msgid "catalog_category"
+msgstr "Категория товара"
+
+#: .\templates\catalog\index.html:66 .\templates\sale\index.html:66
+msgid "Print"
+msgstr "Печать"
+
+#: .\templates\catalog\list.html:4 .\templates\catalog\list.html:7
+msgid "Catalog list"
+msgstr "Каталог"
+
+#: .\templates\catalog\list.html:14
+msgid "Search"
+msgstr "Поиск"
+
+#: .\templates\catalog\list.html:37 .\templates\catalog\list.html:57
+#: .\templates\catalog\list.html:59 .\templates\news\index.html:13
+#: .\templates\notification\index.html:13
+msgid "title"
+msgstr "Название"
+
+#: .\templates\catalog\list.html:47
+msgid "Sort"
+msgstr "Сортировка"
+
+#: .\templates\catalog\list.html:73
+msgid "desc"
+msgstr "по убыванию"
+
+#: .\templates\catalog\list.html:80
+msgid "Go"
+msgstr "Найти"
+
+#: .\templates\catalog\list.html:81
+msgid "Reset"
+msgstr "Сброс"
+
+#: .\templates\catalog\read.html:4 .\templates\coming\read.html:3
+#: .\templates\message\send.html:3 .\templates\news\read.html:4
+#: .\templates\notification\read.html:4 .\templates\outgo\read.html:3
+#: .\templates\sale\read.html:4
+msgid "Read"
+msgstr "Посмотреть"
+
+#: .\templates\coming\create.html:6 .\templates\coming\edit.html:6
+#: .\templates\coming\read.html:6
+msgid "coming"
+msgstr "Приходная накладная"
+
+#: .\templates\coming\index.html:15 .\templates\coming\index.html:34
+#: .\templates\outgo\index.html:15
+msgid "catalogs"
+msgstr "Товары"
+
+#: .\templates\index.html:4 .\templates\registration\logged_out.html:4
+#: .\templates\registration\login.html:4
+#: .\templates\registration\password_change_done.html:3
+#: .\templates\registration\password_change_form.html:3
+#: .\templates\registration\password_reset_complete.html:4
+#: .\templates\registration\password_reset_confirm.html:4
+#: .\templates\registration\password_reset_done.html:4
+#: .\templates\registration\password_reset_form.html:4
+#: .\templates\registration\register_done.html:4
+msgid "App Name"
+msgstr "ТОО FlexoPlus"
+
+#: .\templates\index.html:29 .\templates\index.html:54
+msgid "year"
+msgstr "Год"
+
+#: .\templates\index.html:30 .\templates\index.html:55
+msgid "month"
+msgstr "Месяц"
+
+#: .\templates\message\index.html:13
+msgid "source"
+msgstr "Отправитель"
+
+#: .\templates\message\index.html:14
+msgid "recipient"
+msgstr "Получатель"
+
+#: .\templates\message\index.html:15
+msgid "details"
+msgstr "Текст сообщение"
+
+#: .\templates\message\list.html:55 .\templates\message\send.html:18
+msgid "Messages"
+msgstr "Сообщения"
+
+#: .\templates\message\list.html:66 .\templates\message\send.html:23
+msgid "Send"
+msgstr "Отправить"
+
+#: .\templates\message\send.html:6
+msgid "user"
+msgstr "Пользователь"
+
+#: .\templates\news\index.html:3 .\templates\news\index.html:6
+#: .\templates\news\list.html:4 .\templates\news\list.html:8
+msgid "newss"
+msgstr "Новости"
+
+#: .\templates\notification\create.html:6 .\templates\notification\edit.html:6
+#: .\templates\notification\read.html:7
+msgid "notification"
+msgstr "Уведомление"
+
+#: .\templates\outgo\create.html:6 .\templates\outgo\edit.html:6
+#: .\templates\outgo\read.html:6
+msgid "outgo"
+msgstr "Расходная накладная"
+
+#: .\templates\outgo\index.html:34
+msgid "sales"
+msgstr "Продажи"
+
+#: .\templates\sale\create.html:6 .\templates\sale\edit.html:6
+#: .\templates\sale\index.html:4 .\templates\sale\index.html:14
+msgid "sale"
+msgstr "Продажа"
+
+#: .\templates\sale\index.html:8
+msgid "Sale"
+msgstr "Продажа"

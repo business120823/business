@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "List" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "application" %}</h2>
+{% if application.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "datea" %}</p></th>
+				<th><p>{% trans "application_client" %}</p></th>
+				<th><p>{% trans "application_kind" %}</p></th>
+				<th><p>{% trans "application_title" %}</p></th>
+				<!-- <th><p>{% trans "application_details" %}</p></th> -->
+				<th><p>{% trans "application_price" %}</p></th>
+				<th><p><a href="{% url 'application_create'%}">{% trans "Add" %}</a></p></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for p in application %}
+			<tr>
+				<td><p>{{ p.datea | date:"d.m.Y"}}</p></td>
+				<td><p>{{ p.client }}</p></td>
+				<td><p>{{ p.kind }}</p></td>
+				<td><p>{{ p.title }}</p></td>
+				<!-- <td><p>{{ p.details }}</p></td> -->
+				<td><p>{{ p.price | stringformat:"1.0f" }} ₽</p></td>
+				<td>
+					<p>
+					<a href="{% url 'application_edit' p.id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'application_read' p.id %}">{% trans "View" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'application_delete' p.id %}">{% trans "Delete" %}</a>
+					</p>
+				</td>			
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% else %}
+<a href="{% url 'application_create'%}">{% trans "Add" %}</a>
+{% endif %}
+{% endblock content %}
+

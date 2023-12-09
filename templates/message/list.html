@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "messages" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "messages" %}</h2>
+{% if view_user_last_message.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{{ my_user }}</p></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for n in view_user_last_message %}
+			<tr>
+				<td>
+					<div class="card">
+						<div class="card-header">
+							<h5><a href="{% url 'message_send' n.id %}"> {{ n.first_name }} {{ n.last_name }}</a></h5>							
+							<p>{{ n.username }}</p>
+						</div>
+						<div class="card-body">	
+							<div class="row">
+								<div class="col-md-6">
+									{% if n.last_recipient_id == my_id and n.last_recipient_message != None %}
+										<p><strong>{% trans "last_send_message" %}</strong></p>
+										<p>{{ n.last_recipient_message }}</p>
+									{% endif %}
+								</div>								
+								<div class="col-md-6">
+									{% if n.last_send_id == my_id and n.last_send_message != None %}
+										<p><strong>{% trans "last_recipient_message" %}</strong></p>
+										<p>{{ n.last_send_message }}</p>										
+									{% endif %}									
+								</div>
+							</div>							
+						</div>	
+						<div class="card-footer">
+						</div>						
+					</div>
+				</td>	
+			</tr>
+			{% endfor %}	
+		</tbody>
+	</table>	
+</div>
+{% endif %}
+
+<!-- {% if user.is_authenticated %} -->
+	<!-- <hr> -->
+	<!-- <div class="row justify-content-center">				 -->
+		<!-- <div class="row">			 -->
+			<!-- <center><h5>{% trans "Messages" %}:</h5></center>				 -->
+			<!-- <form method="POST" enctype="multipart/form-data"> -->
+			<!-- {% csrf_token %} -->
+				<!-- <div class="row" style="margin-left: auto; margin-right: 0;"> -->
+					<!-- <div class="col-md-6"> -->
+						
+					<!-- </div>				 -->
+					<!-- <div class="col-md-6"> -->
+						<!-- <textarea id="message" name="message" rows="4" style="width: 100%"> -->
+
+						<!-- </textarea> -->
+						<!-- <button type="submit" class="btn btn-outline-success" >{% trans "Send" %}</button>		 -->
+					<!-- </div>				 -->
+				<!-- </div>				 -->
+			<!-- </form> -->
+		<!-- </div>				 -->
+		<!-- {% if message.count > 0 %} -->
+			<!-- <div class="row">	 -->
+				<!-- <table> -->
+				<!-- {% for n in message %} -->
+				<!-- <tr> -->
+					<!-- {% if n.sender_id == my_user_id %} -->
+					<!-- <td><p style="text-align:right">{{ n.datem | date:"d.m.Y H:i" }}  <br> {{ n.details }}</p></td>	 -->
+					<!-- {% else %} -->
+					<!-- <td><p style="text-align:left">{{ n.datem | date:"d.m.Y H:i" }} <strong>{{ n.sender.first_name }} </strong> <br> {{ n.details }}</p></td>	 -->
+					<!-- {% endif %} -->
+				<!-- </tr> -->
+				<!-- {% endfor %} -->
+				<!-- </table> -->
+			<!-- </div> -->
+		<!-- {% endif %}	 -->
+	<!-- </div> -->
+<!-- {% endif %}	 -->
+{% endblock content %}
+

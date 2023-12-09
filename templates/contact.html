@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% endblock title %}
+{% block header %}{% endblock header %} 
+{% block content %}
+<div class="row">
+	<div class="col-md-3">
+		<h3 align="center">{% trans "Contacts" %}</h3>
+		<h1 align="center">ТОО FlexoPlus</h1>
+		<address>
+			<p>ул. Бродского 143,<br> Алматы 050061</p>			
+			<!-- <a href="mailto:manua140322@mail.ru">manua140322@mail.ru</a>			 -->
+		</address>				
+		<p><a href="tel:+77273104208">+7 (727) 310 42 08</a><p>
+	</div>
+	<div class="col-md-9" style="position:relative;overflow:hidden;">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2904.833289452454!2d76.89543967653951!3d43.275868276753265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836be8f5541571%3A0x189658e2b69bb177!2z0YPQuy4g0JHRgNC-0LTRgdC60L7Qs9C-IDE0Mywg0JDQu9C80LDRgtGLIDA1MDA2MQ!5e0!3m2!1sru!2skz!4v1701957292853!5m2!1sru!2skz" width="100%" height="500px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	</div>
+</div>
+{% endblock content %}

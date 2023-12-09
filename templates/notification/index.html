@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "notifications" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "notifications" %}</h2>
+{% if notification.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "start" %}-{% trans "finish" %}</p></th>
+				<th><p>{% trans "title" %}</p></th>
+				<!--<th></th>-->
+				<th><p><a href="{% url 'notification_create'%}">{% trans "Add" %}</a></p></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for n in notification %}
+			<tr>
+				<td>
+					<p>{{ n.start | date:"d.m.Y H:i"}}-{{ n.finish | date:"d.m.Y H:i"}}</p>
+				</td>
+				<td>
+					<p>{{ n.title }}</p>						
+				</td>
+				<!--
+				<td>
+					{% if n.photo.url != None %}
+					<img style="width:100%; max-width:256px; padding:10px" src="{{ n.photo.url}}" alt="{{ n.photo.url }}">
+					{% endif %}	
+				</td>
+				-->
+				<td>
+					<p>
+					<a href="{% url 'notification_edit' n.id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'notification_read' n.id %}">{% trans "View" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'notification_delete' n.id %}">{% trans "Delete" %}</a>
+					</p>
+				</td>			
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% else %}
+<a href="{% url 'notification_create'%}">{% trans "Add" %}</a>
+{% endif %}
+{% endblock content %}
+

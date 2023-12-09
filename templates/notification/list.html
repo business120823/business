@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "notifications" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<div class="div-width-100-text-center">
+	<h3>{% trans "notifications" %}</h3>
+</div>
+{% if notification.count > 0 %}
+<div class="row">
+	<table id="myTable" style="width:100%">
+		<thead>
+			<tr>
+				<th></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for n in notification %}
+			<tr>
+				<td>
+					<div class="card">
+						<div class="card-header">
+							<h5>{{ n.title }}</h5>
+						</div>
+						<div class="card-body">					
+							<p>{{ n.details | linebreaks }}</p>
+						</div>
+						<div class="card-footer text-muted">
+							<p><strong><p>{{ n.start | date:"d.m.Y H:i"}}-{{ n.finish | date:"d.m.Y H:i"}}</p></strong><p>
+						</div>
+					</div>
+				</td>	
+			</tr>
+			{% endfor %}	
+		</tbody>
+	</table>	
+</div>
+{% endif %}
+{% endblock content %}
+

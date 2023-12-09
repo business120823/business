@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "List" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "client" %}</h2>
+{% if client.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "client_name" %}</p></th>
+				<th><p>{% trans "client_address" %}</p></th>
+				<th><p>{% trans "client_phone" %}</p></th>
+				<th><p>{% trans "client_email" %}</p></th>
+				<th><p>{% trans "client_leader" %}</p></th>
+				<th><p><a href="{% url 'client_create'%}">{% trans "Add" %}</a></p></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for p in client %}
+			<tr>
+				<td><p>{{ p.name }}</p></td>
+				<td><p>{{ p.address }}</p></td>
+				<td><p>{{ p.phone }}</p></td>
+				<td><p>{{ p.email }}</p></td>
+				<td><p>{{ p.leader }}</p></td>
+				<td>
+					<p>
+					<a href="{% url 'client_edit' p.id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'client_read' p.id %}">{% trans "View" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'client_delete' p.id %}">{% trans "Delete" %}</a>
+					</p>
+				</td>			
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% else %}
+<a href="{% url 'client_create'%}">{% trans "Add" %}</a>
+{% endif %}
+{% endblock content %}
+
