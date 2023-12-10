@@ -178,6 +178,7 @@ MEDIA_URL = '/media/'
 # Теперь, при входе в систему, вы по умолчанию должны перенаправляться на домашнюю страницу сайта а не на /accounts/profile/
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = '/login/'
+LOGOUT_REDIRECT_URL = '/'
 LOGOUT_URL = '/logout/'
 
 # Сохранения изображения
